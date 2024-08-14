@@ -43,7 +43,7 @@ enum custom_keycodes {
 #define ALT_E MT(MOD_RALT, KC_E)
 #define CMD_N MT(MOD_RGUI, KC_N)
 
-#define ALT_ASTR MT(MOD_RALT, KC_ASTR)
+#define ALT_ASTR MT(MOD_RALT, KC_PAST)
 #define CMD_1   MT(MOD_RGUI, KC_1)
 
 #define CMD_F1 MT(MOD_RGUI, KC_F1)
@@ -59,10 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer 
  */
     [_BASE] = LAYOUT(
-     CMD_TAB , KC_Q ,  KC_W   ,  KC_F  ,   KC_P ,   KC_G ,                                        KC_J,   KC_L ,  KC_U ,   KC_Y ,KC_SCLN, ALT_TAB,
-     KC_BSPC , KC_A ,  CTL_R  ,  ALT_S ,  CMD_TE,   KC_D ,                                        KC_H,   CMD_N,  ALT_E,   CTL_I,  KC_O , KC_ESC,
-     KC_TAB  , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LEFT,KC_DOWN,     KC_UP  , KC_RGHT, KC_K,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, KC_ENT,
-                      LSFT(KC_TAB), MO(HIGHER), MO(LOWER), KC_SPC, KC_LSFT,     KC_RSFT, KC_SPC , MO(LOWER), MO(HIGHER), RSFT(KC_ENT)
+     CMD_TAB , KC_Q ,  KC_W   ,  KC_F  ,   KC_P ,   KC_G ,                                          KC_J,   KC_L ,  KC_U ,   KC_Y ,KC_SCLN, ALT_TAB,
+     KC_BSPC , KC_A ,  CTL_R  ,  ALT_S ,  CMD_TE,   KC_D ,                                          KC_H,   CMD_N,  ALT_E,   CTL_I,  KC_O ,  KC_ESC,
+     KC_TAB  , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LEFT,  KC_DOWN,     KC_UP  , KC_RGHT, KC_K,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH,  KC_ENT,
+    LSFT(KC_TAB), LT(HIGHER, KC_LEFT), LT(LOWER, KC_DOWN),  KC_SPC,  KC_LSFT,     KC_RSFT, KC_SPC , LT(LOWER, KC_UP), LT(HIGHER, KC_RGHT), RSFT(KC_ENT)
     ),
 
 /*
